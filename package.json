@@ -6,5 +6,8 @@
   "author": "Park D.I.",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
