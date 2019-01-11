@@ -9,6 +9,13 @@ const handleHome = (req, res) => res.send("Hello from my ass");
 
 const handleProfile = (req, res) => res.send("You are on my profile");
 
+const bewteenHome = (req, res, next) => {
+  console.log("Bewteen");
+  next();
+};
+
+app.use(bewteenHome);
+
 app.get("/", handleHome);
 
 app.get("/profile", handleProfile);
