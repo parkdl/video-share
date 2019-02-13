@@ -11,6 +11,6 @@ const UserSchema = new mongoose.Schema({
 
 UserSchema.plugin(passportLocalMongoose, { usernameField: "email" });
 
-const medel = mongoose.Model("User", UserSchema);
+const medel = mongoose.model("User", UserSchema);
 
 export default medel;
