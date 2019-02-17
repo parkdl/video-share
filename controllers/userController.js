@@ -65,10 +65,6 @@ export const postGithubLogIn = (req, res) => {
 
 export const facebookLogin = passport.authenticate("facebook");
 
-export const facebookLoginCallback = (accessToken, refreshToken, profile, cb) => {
-  console.log(accessToken, refreshToken, profile, cb);
-};
-
 export const facebookLoginCallback = async (_, __, profile, cb) => {
   const {
     _json: { id, name, email }
@@ -91,6 +87,10 @@ export const facebookLoginCallback = async (_, __, profile, cb) => {
   } catch (error) {
     return cb(error);
   }
+};
+
+export const postFacebookLogin = (req, res) => {
+  res.redirect(routes.home);
 };
 
 export const logout = (req, res) => {
