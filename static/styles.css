@@ -467,7 +467,7 @@ input[type="submit"] {
     max-width: 850px;
     margin-top: 25px; }
     .video-detail__container .video__info button {
-      width: 100%;
+      width: 15%;
       margin-bottom: 25px; }
     .video-detail__container .video__info .video__title,
     .video-detail__container .video__info .video__views,
