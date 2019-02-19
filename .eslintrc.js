@@ -4,5 +4,8 @@ module.exports = {
     "no-console": "off",
     "linebreak-style": "off",
     "prettier/prettier": "off"
+  },
+  env: {
+    browser: true
   }
 };
