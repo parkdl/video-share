@@ -83,7 +83,7 @@ const routes = {
   facebookCallback: FB_CALLBACK,
   api: API,
   registerView: REGISTER_VIEW,
-  addCommnet: ADD_COMMENT
+  addComment: ADD_COMMENT
 };
 
 export default routes;

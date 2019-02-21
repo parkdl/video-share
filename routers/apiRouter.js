@@ -5,6 +5,6 @@ import { postRegisterView, postAddComment } from "../controllers/videoController
 const apiRouter = express.Router();
 
 apiRouter.post(routes.registerView, postRegisterView);
-apiRouter.post(routes.addCommnet, postAddComment);
+apiRouter.post(routes.addComment, postAddComment);
 
 export default apiRouter;

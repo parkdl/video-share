@@ -1,6 +1,6 @@
 import routes from "../routes";
 import Video from "../models/Video";
-import Commnet from "../models/Comment";
+import Comment from "../models/Comment";
 import { TSArrayType } from "babel-types";
 
 // Home
@@ -141,16 +141,16 @@ export const postRegisterView = async (req, res) => {
 export const postAddComment = async (req, res) => {
   const {
     params: { id },
-    body: { commnet },
+    body: { comment },
     user
   } = req;
   try {
     const video = await Video.findById(id);
-    const newCommnet = await Commnet.create({
-      text: commnet,
+    const newComment = await Comment.create({
+      text: comment,
       creator: user.id
     });
-    video.commnets.push(newCommnet.id);
+    video.comments.push(newComment.id);
     video.save();
   } catch (error) {
     res.status(400);
