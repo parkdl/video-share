@@ -1,7 +1,6 @@
 import routes from "../routes";
 import Video from "../models/Video";
 import Comment from "../models/Comment";
-import { TSArrayType } from "babel-types";
 
 // Home
 
@@ -62,7 +61,8 @@ export const videoDetail = async (req, res) => {
     const video = await Video.findById(id)
       .populate("creator")
       .populate("comments");
-    res.render("videoDetail", { pageTitle: video.title, video });
+    const comment = await Comment.findById(id);
+    res.render("videoDetail", { pageTitle: video.title, video, comment });
   } catch (error) {
     res.redirect(routes.home);
   }
@@ -152,6 +152,20 @@ export const postAddComment = async (req, res) => {
     });
     video.comments.push(newComment.id);
     video.save();
+  } catch (error) {
+    res.status(400);
+  } finally {
+    res.end();
+  }
+};
+
+// Delete Comment
+export const postDeleteComment = async (req, res) => {
+  const {
+    params: { commentId }
+  } = req;
+  try {
+    await Comment.findOneAndRemove(commentId);
   } catch (error) {
     res.status(400);
   } finally {

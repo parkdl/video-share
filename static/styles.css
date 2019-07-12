@@ -228,7 +228,8 @@ button.delete {
   background-color: #bb2f2a; }
 
 button,
-input[type="submit"] {
+input[type="submit"],
+.delete__comment i {
   cursor: pointer; }
 
 .header {
@@ -579,6 +580,9 @@ input[type="submit"] {
     .video-detail__container .video__comments .video__comments-list {
       margin-top: 50px; }
       .video-detail__container .video__comments .video__comments-list li {
+        -webkit-align-content: center;
+            -ms-flex-line-pack: center;
+                align-content: center;
         background-color: #3498db;
         color: white;
         padding: 15px;
@@ -590,6 +594,9 @@ input[type="submit"] {
                 border-bottom-left-radius: 0px; }
         .video-detail__container .video__comments .video__comments-list li:not(:last-child) {
           margin-bottom: 15px; }
+      .video-detail__container .video__comments .video__comments-list .delete__comment {
+        position: absolute;
+        left: 890px; }
 
 .user-profile {
   width: 100%;

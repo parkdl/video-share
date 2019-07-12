@@ -48,6 +48,7 @@ button.delete {
 }
 
 button,
-input[type="submit"] {
+input[type="submit"],
+.delete__comment i {
   cursor: pointer;
 }

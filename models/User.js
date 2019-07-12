@@ -10,13 +10,13 @@ const UserSchema = new mongoose.Schema({
   comments: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "comments"
+      ref: "Comment"
     }
   ],
   videos: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "video"
+      ref: "Video"
     }
   ]
 });

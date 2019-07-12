@@ -6,7 +6,6 @@ block content
         +videoPlayer({
             src:video.fileUrl            
         })
-            
         .video__info
             if loggedUser && video.creator.id === loggedUser.id
                 a(href=routes.editVideo(video.id)) 
@@ -34,4 +33,6 @@ block content
             ul.video__comments-list#jsCommentList
                 each comment in video.comments.reverse()
                     li
-                        span=comment.text
+                        span#jsComment=comment.text
+                            if loggedUser && (String(comment.creator) === loggedUser.id)
+                                button(id=String(comment._id)) ❌

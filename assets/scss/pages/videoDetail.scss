@@ -49,6 +49,7 @@
     .video__comments-list {
       margin-top: 50px;
       li {
+        align-content: center;
         background-color: #3498db;
         color: white;
         padding: 15px;
@@ -57,6 +58,10 @@
         &:not(:last-child) {
           margin-bottom: 15px;
         }
+      }
+      .delete__comment {
+        position: absolute;
+        left: 890px;
       }
     }
   }
