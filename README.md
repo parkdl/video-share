@@ -30,12 +30,12 @@
 
 ### Upload
 
-    ![업로드](./image/업로드.gif)
+    ![upload](./image/upload.gif)
 
 ### Change Password
 
-    ![비밀번호 변경](./image/비밀번호변경.gif)
+    ![password](./image/password.gif)
 
 ### Edit Video
 
-    ![비디오](./image/비디오.gif)
+    ![video](./image/video.gif)
