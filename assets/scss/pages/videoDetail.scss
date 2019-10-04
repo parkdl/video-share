@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   .video__info {
     width: 100%;
     max-width: 850px;
@@ -36,32 +37,51 @@
   .video__comments {
     margin-top: 25px;
     text-align: center;
-    .video__commnet-number {
+    border-top: solid 3px rgba(0, 0, 0, 0.1);
+    padding-top: 25px;
+    width: 90%;
+    .video__comment-number {
       font-size: 18px;
     }
-    .add__commnet {
+    .add__comment {
       margin-top: 25px;
       width: 100%;
       input {
         width: 100%;
       }
+      input:focus {
+        border: solid 2px #74b9ff;
+      }
     }
     .video__comments-list {
       margin-top: 50px;
       li {
-        align-content: center;
-        background-color: #3498db;
-        color: white;
-        padding: 15px;
-        border-radius: 20px;
-        border-bottom-left-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        border-bottom: solid 1px #c2c2c2;
+        color: black;
+        padding: 15px 25px;
+        font-size: 1.25rem;
         &:not(:last-child) {
           margin-bottom: 15px;
         }
+        span {
+          width: 100%;
+        }
+        span:first-child {
+          display: flex;
+          margin-bottom: 0.75rem;
+          color: #2d3436;
+        }
       }
-      .delete__comment {
-        position: absolute;
-        left: 890px;
+      #jsComment {
+        display: flex;
+        justify-content: space-between;
+        .delete_button {
+          width: 0px;
+          height: 0px;
+          padding: 0px;
+        }
       }
     }
   }
