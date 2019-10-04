@@ -30,12 +30,12 @@
 
 ### Upload
 
-    ![upload](./image/upload.gif)
+![Alt Text](./image/upload.gif)
 
 ### Change Password
 
-    ![password](./image/password.gif)
+![Alt Text](./image/password.gif)
 
 ### Edit Video
 
-    ![video](./image/video.gif)
+![Alt Text](./image/video.gif)
